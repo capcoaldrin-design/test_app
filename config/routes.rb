@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   # then it will find a home method inside of it
   # on creating controllers - go to terminal(it should be in the test_app directory) type - rails generate controller the_name_of_the_controller(which is pages)
   root "pages#home"
+  get "about", to: "pages#about"
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Render dynamic PWA files from app/views/pwa/* (remember to link manifest in application.html.erb)
